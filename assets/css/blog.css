@@ -1,0 +1,190 @@
+
+.blog-main{
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+
+
+
+
+.blog-col{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.blog-box{
+    gap: 22px;
+    border-bottom: 1px solid rgba(216, 216, 216, 1);
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.blog-photo{
+    max-width: 247px;
+    width: 100%;
+}
+
+
+.blog-photo img{
+    width: 100%;
+    border-radius: 10px;
+}
+.blog-text{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.blog-text h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 1);
+}
+
+.blog-more{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(27, 35, 64, 1);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    margin-left: auto;
+}
+.blog-more-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    background: rgba(27, 35, 64, 1);
+
+}
+
+
+
+
+
+.pagination-pages{
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.pagination-left, .pagination-right{
+    color: rgba(153, 153, 153, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.pagination-right{
+    color: rgba(0, 92, 254, 1);
+}
+
+
+.pagination-pages ul{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.pagination-pages ul li a{
+    background: rgba(240, 245, 255, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    width: 39px;
+    height: 39px;
+    color: rgba(27, 35, 64, 1);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+}
+.pagination-pages ul li a:hover{
+    background: rgba(27, 35, 64, 1);
+    color: #ffffff;
+}
+.pagination-pages ul li.pagination-active a{
+    background: rgba(27, 35, 64, 1);
+    color: #ffffff;
+}
+
+
+.block-single-title h1 {
+    max-width: 860px;
+}
+
+
+
+
+.casinos-uk-pic{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.casinos-uk-pic img{
+    width: 100%;
+}
+
+.benefits-demand{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+
+
+
+
+.slots-wrap{
+    gap: 18px;
+    margin-bottom: 18px;
+}
+.slots-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(216, 216, 216, 1);
+    background: rgba(255, 255, 255, 1);
+    gap: 22px;
+    border-radius: 20px;
+    padding: 20px;
+    width: calc(25% - 14px);
+}
+.slots-photo{
+    width: 100%;
+}
+.slots-box h3{
+    color: rgba(0, 0, 0, 1);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+}
+.slots-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.slots-btn .btn{
+    gap: 10px;
+    width: 163px;
+}
+.btn-demo{
+    background: unset;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    border-bottom: 1px dashed rgba(1, 91, 255, 1);
+    color: rgba(1, 91, 255, 1);
+}

@@ -1,0 +1,27 @@
+
+
+.icon-star{
+    content: url("../img/icons/star.svg");
+    width: 24px;
+    height: 24px;
+}
+
+
+.icon-star-sil{
+    content: url("../img/icons/star-sil.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.icon-thumbs-up{
+    content: url("../img/icons/thumbs-up.svg");
+}
+.icon-thumbs-bot{
+    content: url("../img/icons/thumbs-bot.svg");
+}
+.icon-search{
+    content: url("../img/icons/search.svg");
+}
+.arrow-right{
+    content: url("../img/icons/arrow-right.svg");
+}
