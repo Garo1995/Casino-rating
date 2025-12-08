@@ -1,0 +1,46 @@
+
+
+
+.what-offer{
+    margin-top: 105px;
+    gap: 2px;
+}
+.what-offer-box{
+    max-width: 338px;
+    width: 100%;
+    gap: 24px;
+    padding: 0 20px;
+}
+
+.what-offer-box img{
+    width: 170px;
+}
+.what-offer-box span{
+    display: block;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+}
+.what-offer-box p{
+    text-align: center;
+    color: rgba(104, 104, 104, 1);
+}
+
+.join-the-com{
+    gap: 80px 100px;
+    margin-top: 80px;
+}
+.join-com-text{
+    width: 45%;
+}
+.join-com-text:last-child{
+    width: 100%;
+}
+.join-com-text h3{
+    text-align: left;
+}
+.join-com-text p{
+    margin-top: 16px;
+}

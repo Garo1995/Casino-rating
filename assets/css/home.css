@@ -75,6 +75,13 @@ p{
 .banner-home{
     padding: 184px 0 236px;
 }
+
+
+
+
+
+
+
 .banner-info h1{
     max-width: 730px;
     width: 100%;
@@ -141,7 +148,7 @@ p{
     line-height: 100%;
     text-align: center;
 }
-.bred-caps ul li a{
+.bred-caps ul li:first-child a{
     color: rgba(0, 92, 254, 1);
     text-decoration: underline;
 }
@@ -401,14 +408,6 @@ p{
     color: #ffffff;
 }
 
-
-
-
-
-
-
-
-
 .last-updated-sec{
     margin-top: 60px;
 }
@@ -568,7 +567,6 @@ p{
 .benefits-min{
     margin-top: 99px;
 }
-
 .benefits-info{
     margin-bottom: 50px;
     border-bottom: 1px solid rgba(199, 199, 199, 1);
@@ -577,12 +575,14 @@ p{
     flex-direction: column;
     gap: 20px;
 }
+
 .benefits-info ul{
     list-style-type: disc;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 .benefits-info ul li{
     font-weight: 400;
@@ -640,16 +640,14 @@ p{
     line-height: 120%;
 
 }
-.benefits-info h3 {
-    font-size: 22px;
-    line-height: 120%;
-
-}
 .benefits-info h4 {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 120%;
     color: rgba(0, 0, 0, 1);
 
+}
+.benefits-info-title{
+    font-size: 33px !important;
 }
 .benefits-info ol {
     list-style: auto;
@@ -1164,4 +1162,83 @@ p{
 }
 .addiction-icon{
     width: 50px;
+}
+
+
+
+
+
+
+@media (max-width: 1820px){
+    .container-large {
+        max-width: 1460px;
+    }
+}
+
+@media (max-width: 1599px){
+    .container-large {
+        max-width: 1320px;
+    }
+    .banner-min {
+        padding: 18px 15px 0;
+    }
+}
+@media (max-width: 1399px){
+    .banner-min{
+        padding: 0;
+    }
+    .banner-home {
+        padding: 154px 0 236px;
+        border-radius: 0;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .casinos-ukraine {
+        padding: 0 15px;
+    }
+    .content-casino {
+        padding: 30px 0;
+    }
+    .content-box {
+        padding: 30px 30px;
+    }
+    .benefits-table {
+        padding: 30px 30px;
+    }
+
+    .resp-gaming {
+        padding: 40px 100px;
+        gap: 20px;
+    }
+    .reviews-main {
+        margin-top: 49px;
+        padding: 0 15px;
+    }
+
+}
+@media (max-width: 1299px){
+    h1 {
+        font-size: 46px;
+    }
+    .banner-info h1 {
+        max-width: 576px;
+    }
+    .first-deposit-box {
+        padding: 24px 20px;
+    }
+    h2 {
+        font-size: 33px;
+    }
+
+    h3 {
+        font-size: 29px;
+    }
+
+
+
+
+
+
+
 }

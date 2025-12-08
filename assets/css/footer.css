@@ -6,8 +6,6 @@ footer{
     border-radius: 30px;
     padding: 50px 0;
 }
-
-
 .footer-logo{
     gap: 110px;
 }
@@ -156,4 +154,20 @@ footer{
     color: rgba(106, 127, 159, 1);
     font-weight: 500;
     line-height: 120%;
+}
+
+
+
+
+
+@media (max-width: 1399px){
+    footer {
+        padding: 0 15px 24px;
+    }
+}
+
+@media (max-width: 1299px){
+    footer {
+        padding: 0 10px 10px;
+    }
 }

@@ -6,7 +6,6 @@
     height: 24px;
 }
 
-
 .icon-star-sil{
     content: url("../img/icons/star-sil.svg");
     width: 24px;
@@ -24,4 +23,13 @@
 }
 .arrow-right{
     content: url("../img/icons/arrow-right.svg");
+}
+.first-logo{
+    content: url("../img/icons/first.svg");
+}
+.favbet-logo{
+    content: url("../img/icons/favbet.svg");
+}
+.casinoUA-logo{
+    content: url("../img/icons/casinoUA.svg");
 }

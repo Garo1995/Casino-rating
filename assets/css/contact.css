@@ -1,0 +1,164 @@
+.contact-main{
+    padding: 85px 0 120px;
+}
+
+.contact-flex{
+    gap: 48px;
+}
+.contact-form{
+    background: rgba(240, 245, 255, 1);
+    max-width: 680px;
+    width: 100%;
+    opacity: 1;
+    padding: 50px 30px;
+    border-radius: 30px;
+
+}
+.contact-form>p{
+    margin-top: 20px;
+}
+
+.contact-inp-flex{
+    margin-top: 20px;
+    gap: 20px;
+}
+.contact-inp{
+    width: 100%;
+}
+.contact-inp label{
+    display: flex;
+    width: 100%;
+}
+.contact-inp input, .form-textarea textarea{
+    width: 100%;
+    height: 50px;
+    transition: 0.3s;
+    border: 1px solid rgba(202, 202, 202, 1);
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    padding: 11px;
+}
+.form-textarea{
+    margin-top: 20px;
+}
+.form-textarea label{
+    width: 100%;
+    display: flex;
+}
+.form-textarea textarea{
+    height: 120px;
+    resize: none;
+    padding: 16px 11px;
+}
+.contact-form .positive-btn .btn {
+    max-width: 157px;
+    padding: 10px 11px;
+}
+
+.contact-soc{
+    max-width: 516px;
+    width: 100%;
+    padding-top: 30px;
+    gap: 20px;
+}
+.contact-mail{
+    color: rgba(0, 92, 254, 1);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+.contact-soc-flex .share-soc{
+    background: rgba(7, 36, 101, 1);
+
+}
+.contact-soc-flex .share-soc img{
+    filter: brightness(0) invert(1);
+}
+.contact-soc-flex{
+    gap: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============-error.html-=============*/
+
+
+
+.page-not-found{
+    gap: 22px;
+    padding-bottom: 100px;
+}
+
+.page-not-found strong{
+    color: rgba(0, 92, 254, 1);
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 100%;
+    text-align: center;
+    display: block;
+}
+.page-not-found h4{
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    margin-top: 20px;
+
+}
+.page-not-found p{
+    color: rgba(255, 255, 255, 1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+.page-not-found ul{
+    list-style-type: disc;
+    margin-left: 20px;
+    max-width: 483px;
+    width: 100%;
+}
+.page-not-found ul li{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.page-found-href{
+    max-width: 635px;
+    width: 100%;
+}
+.page-found-href ul{
+    margin-left: 20px;
+    max-width: 100%;
+
+}
+.page-found-href ul li{
+    color: rgba(0, 92, 254, 1);
+}
+.page-found-href ul li span{
+    color: #FFFFFF;
+}
+.page-found-href ul li a{
+    color: rgba(0, 92, 254, 1);
+    text-decoration: underline;
+}

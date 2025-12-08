@@ -5,6 +5,7 @@ header{
     left: 0;
     width: 100%;
     transition: 0.3s;
+    padding: 0 24px;
 }
 
 
@@ -218,4 +219,59 @@ header{
 
 .open-menu{
     display: none;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1820px){
+
+
+    .logo:before {
+        left: -48px;
+        top: -9px;
+        width: 191px;
+        height: 92px;
+    }
+    .mobile-menu {
+        gap: 24px;
+    }
+    .header-menu>ul {
+        gap: 0 19px;
+    }
+}
+@media (max-width: 1420px){
+    .logo:before {
+        left: -15px;
+        top: 1px;
+        width: 144px;
+        height: 65px;
+    }
+    .gift-box:before {
+        top: -24px;
+        left: -27px;
+        width: 91px;
+        height: 91px;
+    }
+    header {
+        top: 20px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1299px){
+    .header-menu>ul>li>a {
+        padding: 10px 40px 10px 10px;
+        gap: 8px;
+        font-size: 13px;
+    }
+    .submenu-active>a:after {
+        right: 16px;
+        width: 7px;
+        height: 7px;
+    }
 }
