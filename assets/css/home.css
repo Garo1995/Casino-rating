@@ -1281,6 +1281,7 @@ p{
     .link-casino{
         overflow-x: scroll;
         margin-right: -20px;
+        padding-bottom: 12px;
     }
     .link-casino::-webkit-scrollbar {
         width: 0;
@@ -1453,7 +1454,7 @@ p{
 
 @media (max-width: 767px){
     .banner-home {
-        padding: 145px 0 208px;
+        padding: 145px 0 200px;
         border-radius: 0;
     }
     .first-deposit-col {
