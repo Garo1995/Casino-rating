@@ -14,3 +14,23 @@ let bannerSwiper = new Swiper(".banner-slide", {
     },
 });
 
+
+let reviewsSwiper = new Swiper(".reviews-slider", {
+    slidesPerView: 1,
+    spaceBetween: 34,
+    allowTouchMove: false,
+    pagination: {
+        el: ".reviews-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+
+        0: {
+            allowTouchMove: true,
+        },
+        1020: {
+            allowTouchMove: false,
+        }
+    }
+});
+

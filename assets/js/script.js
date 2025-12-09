@@ -9,12 +9,70 @@ $(document).ready(function () {
             $('.mobile-menu').removeClass('transition-menu');
         }
     });
-    $('.nav-menu a').on('click', function () {
-        $('body').removeClass('body_fix');
-        $('.mobile-menu').removeClass('transition-menu');
-        $('.open-menu').removeClass('close-menu');
-    })
+
 });
+
+
+
+$(document).ready(function () {
+
+    function initMobileMenu() {
+        const isMobile = $(window).width() <= 1020;
+        const $items = $('.header-menu > ul > li');
+
+        // Сначала снимаем старые обработчики (важно!)
+        $items.children('a').off('click.mobileMenu');
+
+        if (!isMobile) {
+            // Если не мобилка — всё закрываем
+            $items.removeClass('open-m');
+            $items.children('.submenu').removeAttr('style');
+            return;
+        }
+
+        // Вешаем обработчики только на мобилке
+        $items.children('a').on('click.mobileMenu', function (e) {
+            const $parent  = $(this).parent('li');
+            const $submenu = $parent.children('.submenu');
+
+            if (!$submenu.length) return;
+
+            e.preventDefault();
+
+            const isOpen = $parent.hasClass('open-m');
+
+            if (isOpen) {
+                $parent.removeClass('open-m');
+                $submenu.stop(true, true).slideUp(300);
+            } else {
+                // закрываем все остальные
+                $items.not($parent).each(function () {
+                    $(this)
+                        .removeClass('open-m')
+                        .children('.submenu')
+                        .stop(true, true)
+                        .slideUp(300);
+                });
+
+                // открываем текущий
+                $parent.addClass('open-m');
+                $submenu.stop(true, true).slideDown(300);
+            }
+        });
+    }
+
+    // ✅ Запуск при загрузке
+    initMobileMenu();
+
+    // ✅ Запуск при изменении размера экрана
+    $(window).on('resize', function () {
+        initMobileMenu();
+    });
+
+});
+
+
+
 
 
 if ($('.header-menu ul li').has('submenu')) {
@@ -79,6 +137,27 @@ $(document).ready(function () {
 });
 
 
+
+$(document).ready(function () {
+    $('.open-ul-carts').on('click', function () {
+        const parent = $(this).closest('.bonus-card-ul');
+
+        $(this).toggleClass('content-more-close');
+        parent.find('.open-carts-link').slideToggle(250);
+    });
+});
+
+jQuery(window).scroll(function(){
+    if (jQuery(this).scrollTop() > 1700) {
+        jQuery('.scrollup').fadeIn('slow');
+    } else {
+        jQuery('.scrollup').fadeOut('slow');
+    }
+});
+jQuery('.scrollup').click(function(){
+    jQuery("html, body").animate({ scrollTop: 0 }, 2500);
+    return false;
+});
 
 
 

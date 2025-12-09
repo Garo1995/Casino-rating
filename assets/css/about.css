@@ -44,3 +44,49 @@
 .join-com-text p{
     margin-top: 16px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1199px){
+    .join-the-com {
+        gap: 80px 70px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 1020px){
+    .what-offer {
+        margin-top: 79px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px 20px;
+    }
+    .join-the-com {
+        gap: 50px 50px;
+        margin-top: 72px;
+        flex-direction: column;
+    }
+    .join-com-text{
+        width: 100%;
+    }
+    .join-com-text p{
+        text-align: justify;
+
+    }
+    .publications-main {
+        margin-top: 39px;
+        padding-bottom: 140px;
+    }
+}

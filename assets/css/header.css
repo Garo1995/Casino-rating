@@ -51,11 +51,16 @@ header{
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
-    border-radius: 10px 10px 0 0;
     position: relative;
+    transition: 0.3s;
 }
-.header-menu>ul>li:hover>a{
-    background: rgba(10, 16, 40, 1);
+
+.header-menu ul li a{
+    transition: 0.3s;
+    z-index: 2;
+}
+.header-menu ul li a:hover{
+    color: rgba(0, 92, 254, 1);
 }
 .submenu-active>a:after{
     content: "";
@@ -69,19 +74,24 @@ header{
     transform: rotate(135deg);
     transition: 0.3s;
 }
+.header-menu ul li a:hover:after{
+    border-top: 2px solid rgba(0, 92, 254, 1);
+    border-right: 2px solid rgba(0, 92, 254, 1);
+}
 .header-menu>ul>li:hover>a:after{
     transform: rotate(-45deg);
     top: 14px;
 }
 .submenu{
     background: rgba(10, 16, 40, 1);
-    padding: 20px 20px 10px;
+    padding: 48px 20px 10px;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: -5px;
     display: none;
     transition: 0.3s;
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 .header-menu>ul>li:hover .submenu{
     display: block;
@@ -129,7 +139,6 @@ header{
 }
 
 .search-input label input {
-    border: 1px solid rgba(215, 215, 215, 1);
     height: 45px;
     width: 100%;
     background: rgba(245, 248, 255, 1);
@@ -144,7 +153,6 @@ header{
 .search-input label input::placeholder {
     color: rgba(107, 107, 107, 1);
 }
-
 .serach-img {
     text-align: center;
     display: flex;
@@ -188,7 +196,9 @@ header{
     align-items: center;
 }
 
-
+.mobile-menu .search-cnt{
+    display: none;
+}
 
 
 .header-cnt{
@@ -217,13 +227,50 @@ header{
 }
 
 
+
+
 .open-menu{
     display: none;
 }
+.open-menu span{
+    background: rgba(255, 255, 255, 1);
+    width: 22px;
+    height: 2px;
+    display: block;
+    transition: 0.3s;
+}
+.close-menu {
+    display: none;
+}
+.close-menu span {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
 
+}
 
+.close-menu span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 5px;
+    position: relative;
+}
+.close-menu span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: -3px;
+}
 
+.close-menu span:nth-child(3){
+    display: none;
+}
 
+.body_fix {
+    overflow: hidden;
+}
 
 
 
@@ -258,11 +305,17 @@ header{
         height: 91px;
     }
     header {
-        top: 20px;
         padding: 0 20px;
+        top: 29px;
+    }
+
+
+}
+@media (max-width: 1399px){
+    header {
+        top: 20px;
     }
 }
-
 @media (max-width: 1299px){
     .header-menu>ul>li>a {
         padding: 10px 40px 10px 10px;
@@ -273,5 +326,190 @@ header{
         right: 16px;
         width: 7px;
         height: 7px;
+    }
+}
+
+@media (max-width: 1199px){
+    header {
+        padding: 0;
+    }
+    .gift-box:before {
+        top: -20px;
+        left: auto;
+        width: 80px;
+        height: 80px;
+        right: -19px;
+    }
+    .header-cnt {
+        gap: 40px;
+    }
+    .header-menu>ul>li>a {
+        padding: 10px 34px 10px 10px;
+    }
+    .submenu-active>a:after {
+        right: 9px;
+        width: 6px;
+        height: 6px;
+        top: 11px;
+    }
+}
+@media (max-width: 1020px){
+
+    .open-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        transition: 0.3s;
+        z-index: 111111;
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .mobile-menu {
+        width: 100%;
+        height: calc(100vh - 120px);
+        position: fixed;
+        z-index: 99999;
+        top: 120px;
+        padding: 0 10px;
+
+        left: 0;
+        transition: 0.5s;
+        overflow: hidden;
+        overflow-y: scroll;
+        background: rgba(27, 35, 64, 1);
+        flex-direction: column;
+        transform: translateX(-105%);
+        padding-bottom: 20px;
+    }
+    .transition-menu {
+        transform: translateX(0);
+        -webkit-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+    }
+    .menu-mobile{
+        padding: 15px;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .header-menu {
+        width: 100%;
+        max-width: 470px;
+    }
+    .header-menu>ul>li>a {
+        padding: 3px 34px 3px 0;
+        width: 100%;
+    }
+    .submenu {
+        padding: 20px 30px ;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: 20px;
+    }
+    .header-menu>ul {
+        gap: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .header-menu>ul>li{
+        width: 100%;
+    }
+    .header-menu>ul>li:hover>a {
+        background: unset;
+    }
+    .logo:before{
+        display: none;
+    }
+    .gift-box:before{
+        display: none;
+    }
+    .search-btn{
+        display: none;
+    }
+    .search-box {
+        position: relative;
+        right: 0;
+        top: 0;
+        z-index: 96;
+        margin-top: 20px;
+    }
+    .search-input {
+        width: 100%;
+    }
+    .search-block{
+        display: none;
+    }
+
+
+    .search-btn-sent {
+        width: 40px;
+        position: absolute;
+        left: auto;
+        right: 6px;
+        top: 5px;
+    }
+    .search-btn-sent .serach-img {
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(27, 35, 64, 1);
+
+    }
+    .search-input label input {
+        height: 50px;
+        background: rgba(245, 248, 255, 1);
+        padding: 0 15px 0 20px;
+        font-size: 14px;
+        border: 1px solid rgba(215, 215, 215, 1);
+    }
+
+    .submenu-active>a:after {
+        right: 12px;
+        width: 6px;
+        height: 6px;
+        top: 4px;
+    }
+
+    .header-menu>ul>li:hover .submenu {
+        display: none;
+    }
+
+    .header-menu>ul>li:hover>a:after {
+        transform: rotate(135deg);
+        top: 4px;
+    }
+    .header-menu>ul>li.open-m>a:after {
+        top: 9px!important;
+        transform: rotate(-45deg) !important;
+    }
+
+    .header-menu .submenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        display: none;
+    }
+
+    .header-menu li.open-m > .submenu {
+        max-height: 500px; /* поставь побольше если много пунктов */
+    }
+
+    .mobile-menu .search-cnt{
+        display: flex;
+        position: relative;
+    }
+    .search-cnt {
+        max-width: 470px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .submenu{
+        border-radius: 0;
     }
 }

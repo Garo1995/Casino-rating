@@ -53,7 +53,7 @@ p{
     height: 45px;
 }
 .btn:hover{
-    background: rgba(136, 179, 255, 1);
+    background: rgba(0, 92, 254, 1);
 }
 
 /*========-global-style-end-=======*/
@@ -279,7 +279,9 @@ p{
 }
 
 .bonus-card-ul{
-    margin: 15px 0;
+    margin: 15px 0 10px;
+    position: relative;
+    padding-bottom: 20px;
 }
 .bonus-card-ul ul{
     list-style-type: disc;
@@ -294,7 +296,12 @@ p{
     font-size: 14px;
     line-height: 24px;
 }
-
+.bonus-card .go-the-website{
+    margin-top: 14px;
+}
+.open-carts-link{
+    display: none;
+}
 .go-the-website{
     width: 100%;
 }
@@ -326,7 +333,15 @@ p{
     height: 38px;
 
 }
-
+.href-social a:hover{
+    background: rgba(27, 35, 64, 1);
+}
+.href-social a img{
+    transition: 0.3s;
+}
+.href-social a:hover img{
+    filter: brightness(0) invert(1);
+}
 
 .first-deposit{
     margin-top: 74px;
@@ -364,16 +379,26 @@ p{
 .first-deposit-box .bonus-card-ul{
     gap: 20px;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .first-deposit-box .count-star{
     background: rgba(244, 16, 100, 1);
 
 }
 .open-ul-carts{
+    position: absolute;
+
+    width: 20px;
+    height: 17px;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.open-ul-carts:after{
+    content: "";
     cursor: pointer;
     position: absolute;
-    bottom: -15px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%) rotate(135deg);
     width: 10px;
@@ -381,7 +406,10 @@ p{
     border-top: 2px solid rgba(0, 92, 254, 1);
     border-right: 2px solid rgba(0, 92, 254, 1);
 }
+.open-ul-carts.content-more-close:after{
+    transform: translateX(-50%) rotate(-45deg);
 
+}
 
 
 
@@ -647,7 +675,7 @@ p{
 
 }
 .benefits-info-title{
-    font-size: 33px !important;
+    font-size: 33px ;
 }
 .benefits-info ol {
     list-style: auto;
@@ -738,6 +766,7 @@ p{
     margin-top: 20px;
     gap: 10px;
 }
+
 .share-soc-box p{
    color: rgba(0, 0, 0, 1);
     font-weight: 500;
@@ -755,7 +784,9 @@ p{
     border-radius: 3px;
 }
 
-
+.share-soc:hover{
+    opacity: 0.7;
+}
 
 
 
@@ -785,18 +816,18 @@ p{
     border-bottom: 1px solid rgba(226, 223, 223, 1);
 }
 
-.accordion-click{
+.accordion-click {
     position: relative;
     transition: 0.3s;
-    padding: 20px 20px;
+    padding: 20px 40px 20px 20px;
     cursor: pointer;
 }
 
 .accordion-click:after{
     content: "";
     position: absolute;
-    right: 26px;
-    top: 29px;
+    right: 22px;
+    top: 23px;
     width: 9px;
     height: 9px;
     border-top: 2px solid rgba(0, 92, 254, 1);
@@ -850,13 +881,20 @@ p{
 
 .reviews-rel{
     margin-top: 34px;
-    display: flex;
-    flex-direction: column;
-    gap: 34px;
     width: 100%;
     margin-bottom: 34px;
+    position: relative;
 }
-
+.reviews-rel .reviews-pagination{
+    display: none;
+}
+.reviews-slider{
+    width: 100%;
+}
+.reviews-slider .swiper-wrapper{
+    flex-direction: column;
+    gap: 34px;
+}
 .reviews-box{
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
@@ -1187,6 +1225,10 @@ p{
     .banner-min{
         padding: 0;
     }
+    .banner-fon {
+        border-radius: 0;
+        padding: 140px 0 60px;
+    }
     .banner-home {
         padding: 154px 0 236px;
         border-radius: 0;
@@ -1200,9 +1242,7 @@ p{
     .content-casino {
         padding: 30px 0;
     }
-    .content-box {
-        padding: 30px 30px;
-    }
+
     .benefits-table {
         padding: 30px 30px;
     }
@@ -1236,8 +1276,280 @@ p{
     }
 
 
+}
+@media (max-width: 1199px){
+    .link-casino{
+        overflow-x: scroll;
+        margin-right: -20px;
+    }
+    .link-casino::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    .link-casino::-webkit-scrollbar-thumb {
+        width: 0;
+        height: 0;
+    }
+    .link-casino ul{
+        width: max-content;
+    }
+    .banner-home .container{
+        padding-right: 0;
+    }
+
+    .first-deposit-col {
+        flex-direction: row;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .first-deposit-box {
+        padding: 24px 20px;
+        width: calc(33.333333% - 15px);
+        flex-direction: column;
+        align-items: center;
+        background: #FFFFFF;
+        border: unset;
+    }
+    .bonus-card-ul ul + ul{
+        display: none;
+    }
+    .first-deposit-first {
+        width: 100%;
+    }
+    .first-deposit-box .promo-code {
+        max-width: 252px;
+    }
+    .first-deposit-box .go-the-website {
+        max-width: 100%;
+    }
+    .open-ul-carts {
+        bottom: 0;
+    }
+
+    .first-deposit-box .promo-code {
+        margin-top: 15px;
+    }
+    .benefits-min {
+        margin-top: 60px;
+    }
+    .resp-gaming {
+        padding: 40px 40px;
+    }
+
+}
+@media (max-width: 1020px){
+    h1 {
+        font-size: 42px;
+    }
+    .bonus-content {
+        gap: 20px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .bonus-card:nth-child(2) {
+        box-shadow: unset;
+        margin-top: 0;
+        padding-bottom: 0;
+        order: 1;
+    }
+    .bonus-card:nth-child(1) {
+        order: 2;
+    }
+    .bonus-card:nth-child(3) {
+        order: 3;
+    }
+    .bonus-card {
+        width: 100%;
+        max-width: 380px;
+    }
+    .logo-name {
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .first-deposit-col {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .first-deposit-box {
+        border: unset;
+        max-width: 380px;
+        width: 100%;
+    }
+    .first-deposit {
+        margin-top: 32px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .benefits-info h1 {
+        font-size: 30px;
+    }
+
+    .reviews-head {
+        gap: 7px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .reviews-cnt {
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .reviews-main {
+        padding: 0 10px;
+    }
+    .positive-main {
+        padding: 20px;
+    }
+    .add-review {
+        padding: 40px 20px;
+    }
+    .benefits-table-scr {
+        margin-right: -10px;
+        overflow-x: scroll;
+    }
+    .benefits-table-scr::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    .benefits-table-scr::-webkit-scrollbar-thumb {
+        width: 0;
+        height: 0;
+    }
+    .benefits-table{
+        width: 1240px;
+    }
+    .reviews-slider .swiper-wrapper{
+        flex-direction: row;
+        gap: 0;
+    }
+    .reviews-rel{
+        padding-bottom: 45px;
+    }
+    .reviews-rel .reviews-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+    }
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        border-radius: 50%;
+        background: rgba(217, 217, 217, 1);
+
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background: rgba(27, 35, 64, 1);
+    }
 
 
+}
+
+@media (max-width: 767px){
+    .banner-home {
+        padding: 145px 0 208px;
+        border-radius: 0;
+    }
+    .first-deposit-col {
+        margin-bottom: 0;
+    }
+
+    .last-updated-flex {
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .last-updated-user {
+        flex-direction: column;
+        align-items: center;
+    }
+    .last-updated-data span {
+        margin-top: 4px;
+        text-align: center;
+    }
+    .casinos-uk-text {
+        margin-top: 51px;
+    }
+    .casinos-uk-text p {
+
+        text-align: justify;
+    }
+    .casinos-ukraine {
+        padding: 0 10px;
+    }
+    .content-casino {
+        padding: 16px 0;
+    }
+
+    .benefits-info p{
+        text-align: justify;
+
+    }
+    .benefits-info h1 {
+        max-width: 400px;
+        width: 100%;
+    }
+    .benefits-info h2 {
+        max-width: 400px;
+        width: 100%;
+    }
+    .betting-stable ul li{
+        text-align: justify;
+
+    }
+
+
+    .betting-stable p{
+        text-align: justify;
+
+    }
+    .content-list a {
+        text-align: justify;
+
+    }
+
+}
+@media (max-width: 570px){
+    h1 {
+        font-size: 38px;
+
+    }
+    .banner-info h1{
+        padding-right: 20px;
+    }
+    .add-review-form {
+        flex-direction: column;
+    }
+    .add-review {
+        padding: 45px 10px;
+    }
+    .form-inp {
+        max-width: 100%;
+    }
+    .form-check small {
+        line-height: 18px;
+    }
+    .resp-gaming {
+        padding: 47px 15px;
+    }
+    .casinos-uk-text {
+        margin-top: 48px;
+    }
+    .casinos-uk-pic img {
+        height: 213px;
+        object-fit: cover;
+    }
+    .checkmark {
+        top: 4px;
+    }
 
 
 

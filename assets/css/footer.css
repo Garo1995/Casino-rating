@@ -52,21 +52,26 @@ footer{
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 5px;
-    padding: 5px 8px;
+    padding: 6px 8px;
     display: none;
 }
 .language-drop ul{
     display: flex;
     flex-direction: column;
     gap: 6px;
+
 }
 .language-drop li{
     color: rgba(255, 255, 255, 1);
     font-weight: 500;
     font-size: 16px;
-    line-height: 100%;
+    line-height: 120%;
     cursor: pointer;
     transition: 0.3s;
+}
+.language-drop li:hover{
+    color: rgba(0, 92, 254, 1);
+
 }
 .language-open .language-drop{
     display: block;
@@ -101,7 +106,10 @@ footer{
     text-align: right;
     transition: 0.3s;
 }
+.send-mail:hover{
+    color: rgba(0, 92, 254, 1);
 
+}
 
 
 
@@ -126,8 +134,12 @@ footer{
     font-weight: 500;
     font-size: 16px;
     line-height: 120%;
+    transition: 0.2s;
 }
+.footer-menu a:hover{
+    color: rgba(0, 92, 254, 1);
 
+}
 .responsibly-text{
     border-top: 1px solid rgba(24, 70, 139, 1);
     padding: 45px 0;
@@ -159,6 +171,48 @@ footer{
 
 
 
+.scrollup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    z-index: 89;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background: rgba(0, 92, 254, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    transform: rotate(45deg);
+
+}
+.scrollup-icon{
+    transform: rotate(-45deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 3px;
+}
+.icon-chevrons-up{
+    content: url("../img/chevrons-up.svg");
+
+}
+
+.scrollup span{
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    display: block;
+}
 
 @media (max-width: 1399px){
     footer {
@@ -169,5 +223,54 @@ footer{
 @media (max-width: 1299px){
     footer {
         padding: 0 10px 10px;
+    }
+
+}
+@media (max-width: 1199px){
+    .partner-logos {
+        padding: 29px 0;
+        flex-wrap: wrap;
+    }
+    .responsibly-text {
+        padding: 30px 0;
+    }
+    .copyright {
+        margin-top: 30px;
+    }
+    .footer-logo {
+        gap: 52px;
+    }
+}
+@media (max-width: 1020px){
+    .footer-head {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer-logo {
+        gap: 18px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-info {
+        margin-top: 54px;
+        gap: 52px;
+        flex-direction: column;
+    }
+    .footer-menu {
+        max-width: 100%;
+        width: 100%;
+    }
+    .responsibly-text p {
+        text-align: center;
+        line-height: 125%;
+
+    }
+    .partner-logo {
+        height: 24px;
+    }
+    .copyright p {
+        line-height: 125%;
+        text-align: center;
     }
 }

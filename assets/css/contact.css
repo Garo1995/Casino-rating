@@ -63,6 +63,8 @@
     width: 100%;
     padding-top: 30px;
     gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(199, 199, 199, 1);
 }
 .contact-mail{
     color: rgba(0, 92, 254, 1);
@@ -133,7 +135,7 @@
 }
 .page-not-found ul{
     list-style-type: disc;
-    margin-left: 20px;
+    padding-left: 20px;
     max-width: 483px;
     width: 100%;
 }
@@ -148,7 +150,7 @@
     width: 100%;
 }
 .page-found-href ul{
-    margin-left: 20px;
+    padding-left: 20px;
     max-width: 100%;
 
 }
@@ -161,4 +163,85 @@
 .page-found-href ul li a{
     color: rgba(0, 92, 254, 1);
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1399px){
+    .page-not-found {
+        padding-bottom: 200px;
+    }
+}
+
+
+
+@media (max-width: 1020px){
+    .contact-flex {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .contact-soc {
+        max-width: 100%;
+        align-items: center;
+    }
+    .contact-form {
+        max-width: 100%;
+    }
+    .contact-main {
+        padding: 15px 0 30px;
+    }
+    .page-not-found strong {
+        font-size: 150px;
+    }
+
+    .page-not-found h4 {
+        margin-top: 0;
+    }
+
+}
+@media (max-width: 767px){
+    .contact-inp-flex {
+        gap: 20px;
+        flex-direction: column;
+    }
+    .contact-form .positive-btn .btn {
+        max-width: 100%;
+        padding: 10px 11px;
+    }
+    .contact-form h3{
+        text-align: center;
+    }
+    .contact-form>p{
+        text-align: center;
+    }
+    .page-not-found {
+        padding-bottom: 45px;
+    }
+    .page-not-found {
+        padding-right: 20px;
+    }
+
+
+
+
 }

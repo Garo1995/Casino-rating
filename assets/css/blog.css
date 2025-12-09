@@ -49,6 +49,10 @@
     font-size: 16px;
     line-height: 100%;
     margin-left: auto;
+    transition: 0.3s;
+}
+.blog-more:hover{
+    opacity: 0.70;
 }
 .blog-more-arrow{
     display: flex;
@@ -141,6 +145,8 @@
     border-radius: 20px;
     padding: 20px;
     width: calc(25% - 14px);
+    border: 1px solid transparent;
+
 }
 .slots-box:hover{
     border: 1px solid rgba(216, 216, 216, 1);
@@ -244,7 +250,8 @@
     gap: 13px;
 }
 .similar-slots{
-    margin-bottom: 189px;
+    margin-bottom: 100px;
+    margin-top: 20px;
 }
 
 .slot-spec-item{
@@ -272,28 +279,28 @@
 }
 
 .slot-description{
-    text-align: justify !important;
+    text-align: justify ;
 }
 .slot-casino-card-box-container{
     margin-top: 48px;
     margin-bottom: 33px;
 }
-.slot-casino-card{
+.slot-casino-card {
     background: #ffffff;
     padding: 20px 20px 48px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    width: 288px;
-
+    width: calc(25% - 24px);
 }
 .slot-casino-card .btn{
     width: 100%;
 }
 .slot-casino-card-box{
-    gap: 30px;
+    gap: 0 30px;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .slot-casino-card-logo{
@@ -346,8 +353,6 @@
 .slot-casino-bonus-text{
     color: #000000;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 100%;
     text-align: center;
 
 }
@@ -372,7 +377,10 @@
     width: 100%;
 }
 .list-casinos p{
-    margin-top: 20px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 100%;
+    text-align: center;
 }
 
 .list-casinos-verb{
@@ -455,3 +463,133 @@
 
 }
 
+
+.slot-info-gap{
+    gap: 60px;
+}
+
+
+
+
+
+.banner-info .slot-img-box{
+    display: none;
+}
+
+
+
+@media (max-width: 1299px){
+    .slot-img-box {
+        max-width: 600px;
+    }
+    .slot-info-gap{
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 1199px){
+    .slot-casino-card {
+        width: calc(33.333333% - 24px);
+    }
+    .slot-casino-card-box {
+        gap: 0 20px;
+        margin-top: 30px;
+    }
+
+    .slot-casino-card {
+        width: calc(33.333333% - 14px);
+    }
+}
+@media (max-width: 1020px){
+    .author-main strong {
+        font-size: 50px;
+    }
+    .blog-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blog-main {
+        margin-top: 43px;
+    }
+    .slot-casino-card {
+        width: calc(50% - 14px);
+    }
+    .list-casinos-sec .slot-casino-card-box {
+        margin-top: 11px;
+    }
+    .slot-img-box{
+        display: none;
+    }
+    .slot-info {
+        max-width: 100%;
+        width: 100%;
+    }
+    .banner-info .slot-img-box {
+        display: flex;
+        max-width: 100%;
+        margin-top: 12px;
+    }
+    .similar-slots {
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .slots-box {
+        width: calc(50% - 14px);
+    }
+    .slots-photo {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px){
+    .author-main strong {
+        font-size: 38px;
+        text-align: center;
+        display: block;
+    }
+    .author-main {
+        margin-top: 18px;
+        flex-direction: column;
+    }
+    .author-main p {
+        text-align: center;
+    }
+    .publications-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+    .publications-box  .blog-more {
+        margin-left: 0;
+    }
+    .pagination-pages ul li{
+        display: none;
+    }
+    .pagination-pages ul li:nth-child(1),
+    .pagination-pages ul li:nth-child(2){
+        display: block;
+    }
+}
+
+@media (max-width: 575px){
+    .slot-casino-card {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+
+    }
+    .slot-casino-card-box {
+        gap: 0 20px;
+        margin-top: 0;
+    }
+    .slots-box {
+        width: 100%;
+    }
+    .slots-photo {
+        width: 100%;
+        justify-content: center;
+    }
+}
