@@ -77,6 +77,11 @@ $('.open-promo-code').on('click', function () {
 })
 
 
+$('.close-coocie').on('click', function () {
+    $('.use-of-cookies').toggleClass('use-cookies-close');
+})
+
+
 $('.header-menu ul li').has('.submenu').addClass('submenu-active');
 
 

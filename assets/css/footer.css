@@ -232,11 +232,11 @@ footer{
 
 
 .use-of-cookies{
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 177px;
     width: 100%;
-    z-index: 9999;
+    z-index: 19;
 }
 .use-of-cookies-flex{
     background: rgba(0, 0, 0, 1);
@@ -272,10 +272,15 @@ footer{
 
 
 .bonus-free-spins{
-    position: absolute;
+    position: fixed;
+    z-index: 111;
     left: 0;
     width: 100%;
     bottom: 35px;
+}
+
+.use-cookies-close{
+    display: none;
 }
 
 
