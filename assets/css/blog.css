@@ -126,12 +126,6 @@
     width: 100%;
 }
 
-.benefits-demand{
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-
 .slots-wrap{
     gap: 18px;
     margin-bottom: 18px;
@@ -302,7 +296,20 @@
     flex-wrap: wrap;
     margin-top: 40px;
 }
-
+.slot-casino-card a{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(36, 44, 45, 1);
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+.slot-casino-card a:hover{
+    border-bottom: 1px solid rgba(0, 92, 254, 1);
+    color: rgba(0, 92, 254, 1);
+}
 .slot-casino-card-logo{
     display: flex;
     align-items: center;

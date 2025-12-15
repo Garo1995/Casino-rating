@@ -54,6 +54,7 @@ p{
 }
 .btn:hover{
     background: rgba(0, 92, 254, 1);
+
 }
 
 /*========-global-style-end-=======*/
@@ -269,13 +270,59 @@ p{
     line-height: 120%;
     margin-bottom: 10px;
 }
-.promo-code a{
+.open-promo-code{
     color: rgba(1, 91, 255, 1);
     border-bottom: 1px dashed rgba(1, 91, 255, 1);
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
     text-align: center;
+    cursor: pointer;
+    width: max-content;
+    white-space: nowrap;
+}
+.copy-promo-form{
+    display: none;
+    position: relative;
+    max-width: 264px;
+    width: 100%;
+}
+.promo-code-opened .copy-promo-form{
+    display: block;
+}
+.copy-promo-form label{
+    display: flex;
+    align-items: center;
+}
+.copy-promo-form input{
+    border: 1px solid rgba(215, 215, 215, 1);
+    background: rgba(245, 248, 255, 1);
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px 17px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    color: rgba(107, 107, 107, 1);
+}
+.copy-cod-btn{
+    display: flex;
+    background: unset;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+.icon-copy{
+    content: url("../img/copy.svg");
+}
+.promo-code-rel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .bonus-card-ul{
@@ -334,7 +381,8 @@ p{
 
 }
 .href-social a:hover{
-    background: rgba(27, 35, 64, 1);
+    background: rgba(0, 92, 254, 1);
+
 }
 .href-social a img{
     transition: 0.3s;
@@ -483,15 +531,15 @@ p{
 
 
 .casinos-ukraine{
-    margin-top: 36px;
+    margin-top: 16px;
     padding: 0 25px;
+    width: 99vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    margin-bottom: 45px;
 }
-.casinos-uk-text{
-    margin-top: 75px;
-}
-.casinos-uk-text p{
-    margin-top: 20px;
-}
+
 .content-casino{
     background: rgba(245, 248, 255, 1);
     padding: 55px 0;
@@ -526,7 +574,10 @@ p{
     text-decoration: none;
     position: relative;
 }
-
+.content-list a:hover{
+    color: rgba(27, 35, 64, 1);
+    text-decoration: underline;
+}
 .hidden-link {
     display: none;
 }
@@ -541,13 +592,18 @@ p{
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: 0.3s;
 }
-
+.content-more:hover{
+    color: rgba(27, 35, 64, 1);
+}
 .content-more .arrow {
     width: 110px;
     height: 14px;
     margin-top: 5px;
     position: relative;
+    transition: 0.3s;
+
 }
 .content-more .arrow:before {
     content: '';
@@ -584,6 +640,15 @@ p{
     display: none;
 }
 
+.content-more:hover .arrow:before{
+    border-right: 2px solid rgba(27, 35, 64, 1);
+    border-bottom: 2px solid rgba(27, 35, 64, 1);
+}
+.content-more:hover .arrow:after{
+    border-right: 2px solid rgba(27, 35, 64, 1);
+    border-bottom: 2px solid rgba(27, 35, 64, 1);
+}
+
 .content-more-close .hide-more-link{
     display: block;
 }
@@ -597,13 +662,18 @@ p{
 }
 .benefits-info{
     margin-bottom: 50px;
-    border-bottom: 1px solid rgba(199, 199, 199, 1);
-    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
+.liner-bottom{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(199, 199, 199, 1);
+}
 .benefits-info ul{
     list-style-type: disc;
     margin-left: 20px;
@@ -627,7 +697,9 @@ p{
 .benefits-info ul li b{
     color: rgba(0, 0, 0, 1);
 }
-
+.casinos-uk-text {
+    margin-top: 65px;
+}
 .benefits-table{
     border: 1px solid rgba(212, 212, 212, 1);
     background: rgba(255, 255, 255, 1);
@@ -712,6 +784,8 @@ p{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    list-style-type: none!important;
+    margin: 0;
 }
 .betting-stable ul li{
     position: relative;
@@ -782,10 +856,18 @@ p{
     height: 36px;
     background: rgba(245, 248, 255, 1);
     border-radius: 3px;
+    transition: 0.3s;
 }
-
+.share-soc img{
+    transition: 0.3s;
+}
 .share-soc:hover{
-    opacity: 0.7;
+    background: rgba(27, 35, 64, 1);
+
+}
+.share-soc:hover img{
+    filter: brightness(0) invert(1);
+
 }
 
 
@@ -1155,9 +1237,12 @@ p{
 }
 
 .form-check input:checked ~ .checkmark {
-    background-color: rgba(27, 35, 64, 1);
-    border: 1px solid  rgba(27, 35, 64, 1);
+    background-color: rgba(0, 92, 254, 1);
+    border: 1px solid  rgba(0, 92, 254, 1);
 
+}
+.form-check .checkmark:hover {
+    border: 1px solid  rgba(0, 92, 254, 1);
 }
 .form-check .checkmark:after {
     content: "";
@@ -1165,7 +1250,7 @@ p{
     display: none;
     left: 7px;
     top: 2px;
-    width: 7px;
+    width: 6px;
     height: 12px;
     border: solid white;
     border-width: 0 3px 3px 0;
@@ -1271,9 +1356,6 @@ p{
         font-size: 33px;
     }
 
-    h3 {
-        font-size: 29px;
-    }
 
 
 }
@@ -1411,6 +1493,7 @@ p{
     .benefits-table-scr {
         margin-right: -10px;
         overflow-x: scroll;
+        padding-right: 15px;
     }
     .benefits-table-scr::-webkit-scrollbar {
         width: 0;
@@ -1476,13 +1559,7 @@ p{
         margin-top: 4px;
         text-align: center;
     }
-    .casinos-uk-text {
-        margin-top: 51px;
-    }
-    .casinos-uk-text p {
 
-        text-align: justify;
-    }
     .casinos-ukraine {
         padding: 0 10px;
     }
@@ -1541,9 +1618,7 @@ p{
     .resp-gaming {
         padding: 47px 15px;
     }
-    .casinos-uk-text {
-        margin-top: 48px;
-    }
+
     .casinos-uk-pic img {
         height: 213px;
         object-fit: cover;

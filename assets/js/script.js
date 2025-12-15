@@ -72,12 +72,13 @@ $(document).ready(function () {
 });
 
 
+$('.open-promo-code').on('click', function () {
+    $(this).parent().toggleClass('promo-code-opened');
+})
 
 
+$('.header-menu ul li').has('.submenu').addClass('submenu-active');
 
-if ($('.header-menu ul li').has('submenu')) {
-    $('.submenu').parent().addClass('submenu-active');
-}
 
 $(document).ready(function () {
     $('.search-block').on('click', function (e) {
