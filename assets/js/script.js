@@ -72,9 +72,42 @@ $(document).ready(function () {
 });
 
 
-$('.open-promo-code').on('click', function () {
-    $(this).parent().toggleClass('promo-code-opened');
-})
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".promo-code-rel").forEach(promo => {
+
+        const openBtn = promo.querySelector(".open-promo-code");
+        const form    = promo.querySelector(".copy-promo-form");
+        const copyBtn = promo.querySelector(".copy-cod-btn");
+        const code    = promo.querySelector(".copy-promo-inp");
+        const copied  = promo.querySelector(".promo-copied");
+
+        if (!openBtn || !form || !copyBtn || !code || !copied) return;
+
+        openBtn.addEventListener("click", () => {
+            form.classList.toggle("active");
+        });
+
+        copyBtn.addEventListener("click", () => {
+            const text = code.textContent.trim();
+
+            navigator.clipboard.writeText(text).then(() => {
+                copied.classList.add("active");
+
+                setTimeout(() => {
+                    copied.classList.remove("active");
+                }, 2000);
+            });
+        });
+
+    });
+});
+
+
+
 
 
 $('.close-coocie').on('click', function () {

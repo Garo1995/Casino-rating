@@ -291,11 +291,8 @@ p{
 .promo-code-opened .copy-promo-form{
     display: block;
 }
-.copy-promo-form label{
-    display: flex;
-    align-items: center;
-}
-.copy-promo-form input{
+
+.copy-promo-inp{
     border: 1px solid rgba(215, 215, 215, 1);
     background: rgba(245, 248, 255, 1);
     width: 100%;
@@ -306,6 +303,8 @@ p{
     font-size: 13px;
     line-height: 100%;
     color: rgba(107, 107, 107, 1);
+    display: flex;
+    align-items: center;
 }
 .copy-cod-btn{
     display: flex;
@@ -325,6 +324,62 @@ p{
     gap: 8px;
     margin-top: 10px;
 }
+
+
+
+.promo-code-rel {
+    position: relative;
+}
+
+.copy-promo-form {
+    display: none;
+    margin-top: 10px;
+}
+
+.copy-promo-form.active {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy-promo-inp {
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #f3f6fb;
+    font-weight: 500;
+}
+
+.copy-cod-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.promo-copied {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: #6fcf4a;
+    color: #fff;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.promo-copied.active {
+    opacity: 1;
+}
+
+
+
+
+
+
+
 
 .bonus-card-ul{
     margin: 15px 0 10px;
