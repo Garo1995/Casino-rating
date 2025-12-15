@@ -255,32 +255,39 @@ p{
 
 
 .promo-code{
-    margin-top: 30px;
+    margin-top: 14px;
 }
-.promo-code img{
-    width: 39px;
-}
+
 .promo-code span{
     display: block;
     margin-top: 10px;
     text-align: center;
     color: rgba(27, 35, 64, 1);
-
     font-weight: 700;
     font-size: 14px;
     line-height: 120%;
     margin-bottom: 10px;
 }
 .open-promo-code{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.open-promo-code img{
+    width: 39px;
+}
+.open-promo-code span{
     color: rgba(1, 91, 255, 1);
     border-bottom: 1px dashed rgba(1, 91, 255, 1);
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
     text-align: center;
-    cursor: pointer;
     width: max-content;
     white-space: nowrap;
+    margin: 10px 0 0;
 }
 .copy-promo-form{
     display: none;
@@ -322,7 +329,6 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin-top: 10px;
 }
 
 
@@ -333,7 +339,6 @@ p{
 
 .copy-promo-form {
     display: none;
-    margin-top: 10px;
 }
 
 .copy-promo-form.active {

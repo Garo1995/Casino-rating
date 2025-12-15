@@ -210,6 +210,7 @@ header{
 .gift-box{
     display: flex;
     position: relative;
+    transition: 0.3s;
 }
 .gift-box:before{
     content: '';
@@ -219,13 +220,29 @@ header{
     background: radial-gradient(50% 50% at 50% 50%, #FF4D00 0%, #1B2340 100%);
     width: 112px;
     height: 112px;
+    animation: giftPulse 3s ease-in-out infinite;
+
 }
 .gift-box img{
     width: 40px;
     position: relative;
     z-index: 1;
 }
+@keyframes giftPulse {
+    0% {
+        opacity: 0.6;
+        transform: scale(0.9);
+    }
 
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(0.9);
+    }
+}
 
 
 

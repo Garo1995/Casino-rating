@@ -235,6 +235,11 @@ $(function () {
 
 
 
+$('.bonus-closed').on('click', function () {
+    $('.bonus-free-spins').addClass('bonus-free-closed')
+});
+
+
 $('.language-click').on('click', function (e) {
     $(this).parent().toggleClass('language-open');
     e.stopPropagation();
