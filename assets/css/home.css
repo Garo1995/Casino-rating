@@ -51,6 +51,7 @@ p{
     font-size: 12px;
     line-height: 100%;
     height: 45px;
+    cursor: pointer;
 }
 .btn:hover{
     background: rgba(0, 92, 254, 1);
