@@ -58,6 +58,13 @@ p{
 
 }
 
+
+
+
+
+
+
+
 /*========-global-style-end-=======*/
 
 
@@ -218,7 +225,7 @@ p{
 .logo-name{
     gap: 15px;
 }
-.logo-name h3{
+.logo-name h3, .logo-name a{
     text-align: center;
     color: rgba(0, 0, 0, 1);
     font-weight: 700;
@@ -226,7 +233,15 @@ p{
     line-height: 100%;
 
 }
+.logo-name a{
+    transition: 0.3s;
+    border-bottom: 1px solid transparent;
 
+}
+.logo-name a:hover{
+    color: rgba(1, 91, 255, 1);
+    border-bottom: 1px solid rgba(1, 91, 255, 1);
+}
 .logo-name-stars{
     gap: 15px;
 }
@@ -1144,8 +1159,13 @@ p{
 }
 .add-review-rating ul li{
     display: flex;
+    cursor: pointer;
+    transition: 0.3s;
 }
+.review-stars .icons{
+    background-color      : rgba(255, 196, 0, 1);
 
+}
 .add-review-form{
     margin-top: 15px;
     gap: 15px;

@@ -240,6 +240,12 @@ $('.bonus-closed').on('click', function () {
 });
 
 
+
+$('.add-review-rating ul li').on('click', function () {
+    $(this).toggleClass('review-stars');
+});
+
+
 $('.language-click').on('click', function (e) {
     $(this).parent().toggleClass('language-open');
     e.stopPropagation();

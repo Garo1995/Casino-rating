@@ -1,13 +1,33 @@
+@charset "UTF-8";
+
+.icons {
+    display               : inline-block;
+    height                : 1em;
+    width                 : 1em;
+    mask-size             : contain;
+    -webkit-mask-size     : contain;
+    mask-repeat           : no-repeat;
+    -webkit-mask-repeat   : no-repeat;
+    mask-position         : center;
+    -webkit-mask-position : center;
+    font-size             : 16px;
+    background-color      : rgba(217, 217, 217, 1);
+}
+
+
+
+.icons.icon-star-sil {
+    mask-image         : url("../img/icons/star-sil.svg");
+    -webkit-mask-image : url("../img/icons/star-sil.svg");
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+
+}
 
 
 .icon-star{
-    content: url("../img/icons/star.svg");
-    width: 24px;
-    height: 24px;
-}
-
-.icon-star-sil{
-    content: url("../img/icons/star-sil.svg");
+    content: url(../img/icons/star.svg) ;
     width: 24px;
     height: 24px;
 }

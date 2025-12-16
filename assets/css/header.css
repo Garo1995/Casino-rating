@@ -444,9 +444,7 @@ header{
     .logo:before{
         display: none;
     }
-    .gift-box:before{
-        display: none;
-    }
+
     .search-btn{
         display: none;
     }
@@ -528,5 +526,16 @@ header{
     }
     .submenu{
         border-radius: 0;
+    }
+
+    .gift-box{
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gift-box img{
+        width: 30px;
     }
 }
