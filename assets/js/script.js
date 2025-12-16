@@ -241,8 +241,27 @@ $('.bonus-closed').on('click', function () {
 
 
 
-$('.add-review-rating ul li').on('click', function () {
-    $(this).toggleClass('review-stars');
+document.addEventListener("DOMContentLoaded", () => {
+    const ratingWrap = document.querySelector(".add-review-rating");
+    if (!ratingWrap) return;
+
+    const stars = ratingWrap.querySelectorAll(".js-rating li");
+    const input = ratingWrap.querySelector(".js-rating-input");
+    if (!stars.length || !input) return;
+
+    function setRating(value) {
+        input.value = String(value);
+        stars.forEach((li, i) => {
+            li.classList.toggle("is-filled", i < value);
+        });
+    }
+
+    stars.forEach((li, index) => {
+        li.addEventListener("click", () => setRating(index + 1));
+    });
+
+    // если нужно выставить начальное значение из input
+    setRating(parseInt(input.value || "0", 10));
 });
 
 

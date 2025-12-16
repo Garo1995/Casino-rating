@@ -1163,8 +1163,14 @@ p{
     transition: 0.3s;
 }
 .review-stars .icons{
-    background-color      : rgba(255, 196, 0, 1);
 
+
+}
+.add-review-rating ul { display:flex; gap:6px; }
+.add-review-rating ul li { cursor:pointer; }
+
+.add-review-rating ul li.is-filled i{
+    background-color: rgba(255, 196, 0, 1);
 }
 .add-review-form{
     margin-top: 15px;
